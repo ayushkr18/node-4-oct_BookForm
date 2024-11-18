@@ -1,0 +1,35 @@
+<%- include('./base/header.ejs') %>
+<div class="container">
+  <div class="alert bg-primary my-5">
+    <h4 class="text-center">Books Searching Panel</h4>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col" style="border: 1px solid lightslategray">
+      <form action="/search" method="post">
+        <div>
+          <label class="form-label">Book Id:</label>
+          <input type="text" name="bookId" class="form-control" />
+        </div>
+
+        <div>
+          <label class="form-label">ISBN No:</label>
+          <input type="text" name="isbnNo" class="form-control" />
+        </div>
+
+        <input
+          type="submit"
+          value="Search"
+          class="btn btn-warning w-100 my-3"/>
+
+        <a href="/find/window" class="btn btn-outline-secondary w-100 my-3">Details</a>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+
+<%- include('./base/footer.ejs') %>

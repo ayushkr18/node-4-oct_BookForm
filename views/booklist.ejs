@@ -1,0 +1,30 @@
+<%- include('./base/header.ejs') %>
+<div class="container">
+    <div class="alert bg-warning my-3">
+        <h4 class="text-center" style="color: white">Book List</h4>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <table class="table text-center">
+            <tr>
+                <th>Image</th>
+                <th>Book Name</th>
+                <th>Author Name</th>
+                <th>Publication House</th>
+            </tr>
+            <% books.forEach((book)=> { %>
+                <tr>
+                    <td><img src="<%= book.bookImage %>" width="30px" height="30px"></td>
+                    <td><%= book.bookName %></td>
+                    <td><%= book.authorName %></td>
+                    <td><%= book.publicationHouse %></td>
+                    <td><%= book.bookName %></td>
+                </tr>
+            <% })
+        </table>
+    </div>
+</div>
+
+<%- include('./base/footer.ejs') %>

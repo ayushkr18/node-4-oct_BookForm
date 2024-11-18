@@ -1,0 +1,69 @@
+<%- include('./base/header.ejs') %>
+<div class="container">
+  <div class="alert bg-info my-3">
+    <h4 class="text-center">Books Login Panel</h4>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col" style="border: 1px solid lightslategray">
+      <form action="/signup" method="post" enctype="multipart/form-data">
+        <div>
+          <label class="form-label">Book Id:</label>
+          <input type="text" name="bookId" class="form-control" />
+        </div>
+
+        <div>
+          <label class="form-label">Book Name:</label>
+          <input type="text" name="bookName" class="form-control" />
+        </div>
+
+        <div>
+          <label class="form-label">Author Name:</label>
+          <input type="text" name="authorName" class="form-control" />
+        </div>
+
+        <div>
+          <label class="form-label">Publication House:</label>
+          <input type="text" name="publicationHouse" class="form-control" />
+        </div>
+
+        <div>
+          <label class="form-label">Isbn No:</label>
+          <input type="text" name="isbnNo" class="form-control" />
+        </div>
+
+        <div>
+          <label class="form-label">Price:</label>
+          <input type="text" name="price" class="form-control" />
+        </div>
+
+        <div class="dropdown">
+          <label class="form-label">Select Your Language:</label>
+            <select name="language" id="language" class="form-control">
+                <option value="hindi">Hindi</option>
+                <option value="english">English</option>
+            </select>
+
+          <!-- <input type="text" name="language" class="form-control" /> -->
+        </div>
+
+        <div>
+          <label class="form-label">Choose Your Image:</label>
+          <input type="file" name="bookImage" class="form-control" />
+        </div>
+
+        <input
+          type="submit"
+          value="Submit"
+          class="btn btn-success w-100 my-3"
+        />
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+
+<%- include('./base/footer.ejs') %>
